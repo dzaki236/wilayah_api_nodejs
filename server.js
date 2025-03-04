@@ -7,4 +7,11 @@ const port = 9001;
 App.use(cors());
 App.use(express.json());
 App.use('/api',route);
+App.all('*', (req, res) => {
+    res.status(404).json({
+        "message": "Request failed with status code 404",
+        "code": "ERR_BAD_REQUEST",
+        "status": 404
+      });
+  });
 App.listen(port, () => console.log(`Server running on port ${port}`));
