@@ -3,7 +3,7 @@ import * as path from "path";
 import { route } from "./app/routes/wilayah.route.js";
 import cors from "cors"
 const App = express();
-const port = 9001;
+const port = 8080;
 App.use(cors());
 App.use(express.json());
 App.use('/api', route);
