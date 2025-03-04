@@ -4,7 +4,9 @@
     "main": "server.js",
     "type": "module",
     "scripts": {
-        "test": "nodemon server.js"
+        "test": "nodemon server.js",
+        "start": "./node_modules/netlify-lambda/bin/netlify-lambda serve /",
+        "build": "./node_modules/netlify-lambda/bin/netlify-lambda build /"
     },
     "keywords": [],
     "author": "",
@@ -14,7 +16,9 @@
         "axios": "^1.8.1",
         "cors": "^2.8.5",
         "ejs": "^3.1.10",
-        "express": "^4.21.2"
+        "express": "^4.21.2",
+        "netlify-lambda": "^2.0.16",
+        "serverless-http": "^3.2.0"
     },
     "devDependencies": {
         "nodemon": "^3.1.9"
